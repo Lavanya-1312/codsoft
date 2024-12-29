@@ -1,0 +1,354 @@
+@import url('https://fonts.googleapis.com/css2?family=Arvo:ital,wght@0,400;0,700;1,400;1,700&family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Parkinsans:wght@300..800&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
+
+*{
+    padding: 0;
+    margin: 0;
+    box-shadow: border-box;
+}
+html{
+    scroll-behavior: smooth;
+    scroll-padding-top:6rem;
+    overflow-x: hidden;
+}
+body {
+    overflow: hidden;
+}
+section{
+    padding: 2rem 9%;
+}
+header {
+    position: fixed;
+    top: 1%; left: 0; right: 0;
+    height: 10px;
+    background-color: white;
+    color:rgb(12, 72, 128);
+    padding: 25px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-left: 50px;
+    padding-right: 50px;
+    border-radius: 15px;
+    box-shadow: 0 2px 15px 5px rgb(15, 0, 0);
+}
+
+.logo h1 {
+    font-family: "Playfair Display",serif;;
+    font-size: 45px;
+    padding-left: 1.5rem;
+}
+nav ul {
+    list-style: none;
+    display: flex;
+    gap:5rem;
+    font-family: "Playfair Display",serif,bold;
+    padding-right: 10rem;
+}
+nav ul li {
+    display: inline;
+}
+nav ul li a {
+    padding: 5px;
+    text-decoration: none;
+    text-transform: capitalize;
+    color:rgb(12, 72, 128) ;
+    font-size: 25px;
+    border-radius: 45%;
+    transition: background-color 0.3s;
+}
+nav ul li a:hover{
+    background-color:rgb(12, 72, 128);
+    color: white;
+    border-radius:45%;
+}
+.home{
+    display: flex;
+    overflow: hidden;
+    text-align: center;
+    min-height:90vh;
+    background: url(bg-img.jpg) no-repeat;
+    background-size:cover ;
+    background-position: center;
+}
+.home .content{
+    max-width: 30rem;
+    padding-top: 5px;
+}
+.home .content h2{
+    font-family: "Playfair Display",serif;
+    padding-top: 12rem;
+    font-size: 80px;
+    color: white;
+    animation: fadeInUp 2s ease;
+}
+.home .content p{
+    font-family: "Playfair Display",serif;
+    font-size: 20px;
+    color: white;
+    padding: 10px;
+    line-height: 1.5;
+}
+.container{
+    display: flex;
+    flex-direction: column;
+}
+.animation{
+    text-transform: uppercase;
+    font-family: "Playfair Display",serif;
+    font-size: 16px;
+    color: white;
+    letter-spacing: 1px;
+    display: inline-block;
+    animation: fadeIn 1.5s forwards;
+    opacity: 0;
+    transition-timing-function: cubic-bezier(0.785, 0.135, 0.15, 0.86);
+}
+span{
+    margin-top: 12px;
+    margin-bottom: 7px;
+}
+.first{
+    display: inline-block;
+    animation: firstspan 1.5s forwards cubic-bezier(0.785, 0.135, 0.15, 0.86);
+    z-index: -1;
+    position: relative;
+    font-weight: 500;
+}
+.slide{
+    display: inline-flex;
+    overflow: hidden;
+}
+.second{
+   font-weight: 100;
+   z-index: -1;
+   display: inline-block;
+   animation: secondspan 1.5s forwards cubic-bezier(0.785, 0.135, 0.15, 0.86);
+}
+@keyframes fadeInUp{
+    0%{
+        opacity: 0;
+        transform: translateY(50px);
+    }
+    100%{
+        opacity: 1;
+        transform: translateY(0px);
+    }
+}
+@keyframes fadeIn{
+    0%{
+      opacity: 0;
+      transition-timing-function:scale(1);
+    }
+    100%{
+      opacity: 1;
+      transition-timing-function:scale(1);
+    }
+}
+@keyframes firstspan{
+    0%{
+       transform:translatex(50%); 
+    }
+    100%{
+        transform: translatex(0%)
+    }
+}
+@keyframes secondspan{
+    0%{
+       transform:translatex(-100%); 
+    }
+    60%{
+        transform: translatex(-100%)
+    }
+    100%{
+        transform: translatex(0%)
+    }
+}
+.button{
+    display: inline;
+    font-family: "Playfair Display",serif;
+    font-size: 25px;
+    padding: 3px 20px;
+    border-radius: 25px;
+    background-color: white;
+    color:rgb(12, 72, 128) ;
+    cursor: pointer;
+}
+.button:hover{
+    background-color: rgb(71, 143, 47) ;
+    color: white;
+}
+.heading{
+    text-align: center;
+    font-size: 4rem;
+    color: black;
+    padding: 5px;
+    margin: 1rem 0;
+    background-color:rgb(183, 214, 244) ;
+}
+.about .row{
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    flex-wrap: wrap;
+    padding: 2rem 0 3rem 0;
+}
+.about .row .image-1 img{
+    height: 400px;
+    width: 600px;
+    border: 5px solid rgb(2, 59, 112);
+    border-radius: 0.5rem;
+    box-shadow: 0 .5rem 1rem rgba(0,0,0,.1);
+    overflow: hidden;
+}
+.about .row .content{
+    margin-top: -45rem;
+    flex:2 2 0rem;
+    color: black;
+}
+.about .row .content h3{
+    text-align:right;
+    margin-top: 15rem;
+    margin-right:10rem;
+    text-decoration: underline;
+    font-size: 2rem;
+    color: black;
+}
+.about .row .content p{
+    text-align: left;
+    margin-left: 45rem;
+    margin-bottom: -5.5rem;
+    font-size: 1.5rem;
+    color: black;
+    padding: 5rem 0;
+    padding-top: 1rem;
+    line-height: 1.5;
+}
+.about .row .content .color{
+    margin-top: 1rem;
+}
+.about .row .content .color p{
+    text-align: center;
+    font-weight: bold;
+    color:  rgb(212, 28, 154) ; 
+    margin-bottom: -50px;
+}
+.about .button{
+    margin-left: 45rem;
+    padding: 0.0rem 2.5rem 0.5rem 1rem;
+    border-radius:0 50% 50% 0;
+    background-color: rgb(2, 59, 112);
+    color:white;
+}
+.about .button:hover{
+   background-color:  rgb(71, 143, 47);
+   color:white
+}
+.right{
+    display: flex;
+}
+.box{
+    display: flex;
+    margin-top: 1rem;
+}
+.right .box .image{
+    width: 6rem;
+    height:5rem;
+    margin: -7rem 1rem 0 1rem;
+    border-radius: 50%;
+    box-shadow: -5px 5px 17px rgba(0,0,0,0.3);
+    cursor: pointer;
+}
+.right .box .image:hover{
+    background-color: rgb(104, 104, 108);
+}
+.image img{
+    margin: 7px 2px 0 9px;
+}
+.box .inner-box{
+    margin: -6.5rem 2rem 0 0rem;
+}
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 3rem;
+    margin-top: 2rem;
+    margin-right: .7rem;
+}
+.gallery img {
+    width: 100%;
+    border:5px solid black;
+    border-radius: 8px;
+    cursor: pointer;
+}
+.gallery .image-name {
+    font-size: 1.5rem;
+    text-align: center;
+    margin-top:0.5rem;
+    font-weight: bold;
+}
+.contact img{
+    width: 77.5rem;
+    height: 35rem;
+    margin-left:0;
+}
+.contact h2 {
+    margin-bottom: 1rem;
+}
+.contact form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: -27rem 0 2rem 25rem;
+}
+.contact form input, .contact form textarea, .contact form button {
+    width: 100%;
+    max-width: 600px;
+    margin-bottom: 1rem;
+    padding: 0.5rem;
+    border: 1px solid black;
+    border-radius: .5rem;
+}
+.contact form button {
+    background: rgb(2, 59, 112);
+    color: white;
+    border: none;
+    cursor: pointer;
+    padding: 0.75rem 1.5rem;
+}
+.contact form button:hover {
+    background:  rgb(71, 143, 47);
+}
+footer {
+    position: absolute;
+    width: 75.5rem;
+    background: rgb(69, 69, 69);
+    color:white;
+    padding: 2rem 1rem;
+    text-align: center;
+    font-size: 1.5rem;
+}
+.footer .social-media {
+    margin: 1rem  0 3rem 0;
+}
+.footer .social-media i {
+    text-decoration: none;
+    margin: 0 1rem;
+    gap: 1rem;
+}
+.footer .social-media i:hover {
+    cursor: pointer;
+    text-decoration: underline;
+    color: rgb(226, 185, 5);
+}
+footer .links {
+    margin-bottom: 2rem;
+    font-family: "Playfair Display",serif;
+    margin-top:-1rem;
+}
+footer .links a {
+    color: white;
+    font-size: 1.2rem;
+}
+footer .links a:hover {
+    color: rgb(71, 143, 47);
+}

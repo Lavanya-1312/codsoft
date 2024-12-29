@@ -1,0 +1,488 @@
+@import url('https://fonts.googleapis.com/css2?family=Arvo:ital,wght@0,400;0,700;1,400;1,700&family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Parkinsans:wght@300..800&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Roboto+Slab:wght@100..900&family=Space+Grotesk:wght@300..700&display=swap');
+*{
+    padding: 0;
+    margin: 0;
+    box-shadow: border-box;
+}
+html{
+    scroll-behavior: smooth;
+    scroll-padding-top:6rem;
+    overflow-x: hidden;
+}
+body {
+    background: rgb(30, 30, 57);
+    overflow: hidden;
+}
+section{
+    min-height: 70vh;
+    padding: 7rem 9% 2rem;
+    margin-bottom: 3rem;
+}
+header {
+    background: rgb(30, 30, 57);
+    position: fixed;
+    top: 0; left: 0; right: 0;
+    color:rgb(0, 225, 225);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 20px;
+    z-index: 100;
+}
+.logo{
+    opacity: 0;
+    animation: slideRight 1.5s ease forwards;
+}
+.logo h1 {
+    font-size: 1.8rem;
+    padding-top: .5rem;
+    padding-left: 6rem;
+}
+.logo span{
+    color: transparent;
+    font-family: "Arvo", serif;
+    font-size: 3rem;
+    letter-spacing: 1px;
+    -webkit-text-stroke: 1px rgb(0, 225, 225);
+}
+nav ul {
+    gap: 3.5rem;
+    list-style: none;
+    display: flex;
+    font-family: "Arvo", serif ;
+    padding-right: 13rem;
+}
+nav ul li {
+    display: inline;
+    padding-right: 5rem;
+}
+nav ul li a { 
+    position: fixed;
+    padding:7px 20px;
+    text-decoration: none;
+    color:rgb(0, 225, 225) ;
+    font-size: 1.1rem;
+    animation: SlideBottom 1s ease forwards;
+}
+nav ul li a:hover{
+    color:rgb(0, 225, 225);
+    border-radius: 25px;
+    box-shadow: 0 0 15px rgb(0, 225, 225);
+    cursor:pointer; 
+}
+.home .home-content{
+    display: flex;
+    flex-wrap: wrap;
+}
+.home-content img{
+    margin-left: 59%;
+    margin-top: 2rem;
+    border: 2px solid rgb(30, 30, 57);
+    border-radius: 50%;
+    box-shadow: 0 0 15px rgb(12, 250, 250);
+}
+.home-content .content{
+    margin-top: -25rem;
+    max-width: 58%;
+    font-family: "Avro",serif;
+    line-height: 1.3;
+}
+ .home-content h3{
+    color: white;
+    font-size: 1.5rem;
+    font-weight: 700;
+    letter-spacing: 2px;
+}
+.home-content h1{
+    color: white;
+    font-size: 2.1rem;
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+.home-content h2{
+    display: inline-block;
+    color: white;
+    font-size: 2.1rem;
+    font-weight: 600;
+    letter-spacing: 1px;
+}
+.home-content h2 span{
+    position: relative;
+    display: inline-block;
+    color: transparent;
+    font-size: 3.2rem;
+    font-family: "Arvo", serif;
+    -webkit-text-stroke: .7px rgb(0, 225, 225);
+}
+@keyframes display-text{
+    25%,100%{
+        display: none;
+    }
+}
+.home-content h2 span::before{
+    content: attr(data-text);
+    position: absolute;
+    width:0;
+    border-right: 2px solid rgb(0, 225, 225);
+    color: rgb(0, 225, 225);
+    white-space: nowrap;
+    overflow: hidden;
+    animation: fill-text 4s linear infinite;
+}
+@keyframes fill-text{
+    10%,100%{
+        width: 0;
+    }
+    70%,90%{
+        width: 100%;
+    }
+}
+.home-content p{
+    color: white;
+    font-size: 1.2rem;
+}
+.social-media {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    margin:2rem 1.5rem 0 0;
+    gap: 1.2rem;
+    font-size:1.2rem ;
+    color: rgb(0, 225, 225);
+    background: transparent; 
+} 
+.social-media a{
+    color: rgb(0, 225, 225);
+}
+.social-media i{
+    border:2px solid rgb(0, 225, 225);
+    border-radius:47%;
+    padding: .6rem;
+}
+.social-media i:hover{
+    cursor: pointer;
+    transform: scale(1.2);
+    box-shadow: 0 0 15px rgb(12, 250, 250);
+}
+.button {
+    display: inline-block;
+    margin-top: 1.5rem;
+    text-decoration: none;
+    font-family: "Avro",serif;
+    font-size: 1rem;
+    font-weight: 700;
+    padding:10px 15px;
+    color: rgb(0, 225, 225);
+    background:  rgb(30, 30, 57);
+    border: 2px solid rgb(0, 225, 225);
+    border-radius: 4rem;
+}
+.button:hover{
+    color:rgb(30, 30, 57);
+    background:rgb(0, 225, 225);
+    box-shadow: 0 0 15px rgb(12, 250, 250);
+}
+
+@keyframes slideRight{
+    0%{
+        transform: translateX(-50px);
+        opacity: 0;
+    }
+    100%{
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+@keyframes SlideBottom{
+    0%{
+        transform: translateY(-35px);
+        opacity: 0;
+    }
+    100%{
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+.about .row,.block{
+    margin-top: -6rem;
+    padding:6rem 50px 5rem 0;
+    border-radius: 25px;
+    background-color:rgba(100, 98, 98, 0.216) ;
+}
+.about .row .image-1 img{
+    margin-left: 9.5%;
+    height: 400px;
+    width: 400px;
+    border: 2px solid rgb(2, 59, 112);
+    border-radius: 50%;
+    box-shadow: 0 0 15px rgb(12, 250, 250);
+}
+.about .row .content-1{
+    font-family: "Avro",serif;
+    margin-top: -40rem;
+    flex:2 2 0rem;
+}
+.about .row .content-1 h3{
+    text-align:right;
+    margin-top: 12rem;
+    margin-right:18rem;
+    font-size: 3rem;
+    color: white;
+}
+.about .row .content-1 h3 span{
+    color: rgb(0, 225, 225);
+}
+.about .row .content-1 p{
+    margin-left: 37rem;
+    margin-bottom: -5.5rem;
+    font-size: 1.3rem;
+    color: white;
+    padding: 5rem 0;
+    padding-top: 1rem;
+    line-height: 1.5;
+}
+.about .row .content-1 .btn, .block .btn, .contact .btn-1{
+    display: inline-block;
+    margin-left: 50%;
+    margin-top: 3rem;
+    text-decoration: none;
+    font-family: "Avro",serif;
+    font-size: 1.5rem;
+    font-weight: 700;
+    padding:10px 20px;
+    color: rgb(0, 225, 225);
+    background:  rgb(30, 30, 57);
+    border: 2px solid rgb(0, 225, 225);
+    border-radius: 4rem;
+    cursor: pointer;
+}
+.about .row .content-1 .btn:hover, .block .btn:hover, .contact .btn-1:hover{
+    cursor: pointer;
+    transform: scale(.9);
+    box-shadow: 0 0 15px rgb(12, 250, 250);
+}
+.skills{
+    width: 400px;
+    height: 500px;
+    padding: 75px 90px;
+    margin-left: 6rem;
+    margin: -6rem 0 20rem 3rem;  
+    font-family: "Avro",serif;
+    font-size: 1.2rem;
+    color: white;
+    padding: 3rem 55px;
+    border-radius: 25px;
+    background-color:rgba(100, 98, 98, 0.216) ;
+}
+.skills .heading{
+    text-align: center;
+    margin-bottom: 50px;
+}
+.bar{
+    font-size: 23px;
+}
+.Technical-bars .bar{
+    margin: 25px 0;
+}
+.Technical-bars .progress-line{
+    position: relative;
+    border-radius: 10px;
+    width: 100%;
+    height: 5px;
+    background-color:black;
+}
+.Technical-bars .progress-line span{
+    height: 100%;
+    background-color: rgb(0, 225, 225);
+    position: absolute;
+    border-radius: 10px;
+}
+.progress-line.html span{
+    width: 90%;
+}
+.progress-line.css span{
+    width: 85%;
+}
+.progress-line.javascript span{
+    width: 70%;
+}
+.progress-line.python span{
+    width: 60%;
+}
+.progress-line.java span{
+    width:70%;
+}
+#skills-1 {
+    padding:2rem 50px;
+    margin-left: 50%;
+    margin-top: -53rem;
+    text-align: center;
+    border-radius: 25px;
+    background-color:rgba(100, 98, 98, 0.216) ;
+  }
+  
+  #skills-1 h2 {
+    font-size: 2rem;
+    margin-bottom: 40px;
+    color:white;
+  }
+  #skills-1 h2 span{
+    color:rgb(0, 225, 225);
+  }
+  .skills-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 3rem;
+  }
+  .skill {
+    width: 120px;
+    text-align: center;
+  }
+  .skill p {
+    margin-top: 10px;
+    font-size: 1.1rem;
+    color: white;
+  }
+  .circle {
+    width: 100px;
+    height: 100px;
+    position: relative;
+    background: conic-gradient(rgb(65, 228, 228) 0%,rgb(65, 228, 228) var(--progress), rgb(69, 68, 68) var(--progress));
+    border-radius: 50%;
+  }
+  
+  .circle::before {
+    content: '';
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    width: 80px;
+    height: 80px;
+    background: rgb(49, 49, 78);
+    border-radius: 50%;
+  }
+  .block h3, .contact h3{
+    text-align: center;
+    font-size: 3rem;
+    margin-top: -1rem;
+    margin-bottom: 5rem;
+    color:white;
+  }
+  .projects{
+    border: 2px solid rgb(0, 225, 225);
+    height: 15rem;
+    box-shadow: 0 0 10px rgb(12, 250, 250);
+    border-radius: 1.5rem;
+    margin:1rem 2rem 3rem 5rem;
+  }
+  .projects:hover{
+    cursor: pointer;
+    transform: scale(1.03);
+    box-shadow: 0 0 15px rgb(12, 250, 250);
+}
+  .block h3 span .contact h3, span{
+    color: rgb(0, 225, 225);
+  }
+  .block .projects img{
+    margin-left: 4.5%;
+    width: 20rem;
+    height: 11em;
+    border: 2px solid white;
+    border-radius: 1.5rem;
+    margin-top: 2rem;
+  }
+  .block .projects .content-2{
+    margin-left: 25rem;
+    margin-top: -18.5rem;
+    font-size: 1rem;
+    color: white;
+    padding: 1rem ;
+    line-height: 1.5;
+  }
+  .block .projects .content-2 h4{
+    text-align: center;
+    font-size: 30px;
+    color: rgb(0, 225, 225);
+    margin: 5.5rem 0 0 -1rem;
+  }
+  .contact{
+    width: 80%;
+    height: 500px;
+    padding: 75px 90px;
+    margin-left: 6rem;
+    margin-top: -6rem;
+    font-family: "Avro",serif;
+    font-size: 1.2rem;
+    padding: 3rem 55px;
+    border-radius: 25px;
+    background-color:rgba(100, 98, 98, 0.216);
+  }
+  .contact form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0 0 -1.5rem 25rem;
+}
+.contact form input, .contact form textarea, .contact form button {
+    width: 100%;
+    max-width: 600px;
+    margin-bottom: 1rem;
+    padding: 0.5rem;
+    color: white;
+    background-color: transparent;
+    border: 2px solid rgb(0, 225, 225);
+    border-radius: .5rem;
+}
+.contact .btn-1{
+    margin-left: 28rem;
+    border-radius: 20px;
+}
+.contact .sub{
+    margin-top: -25rem;
+    height: 22rem;
+    width: 20rem;
+    border-radius: 10px;
+    background: rgba(100, 98, 98, 0.216);
+    box-shadow: 0 5px 15px 0 rgb(29, 29, 29);
+}
+.contact .sub i{
+    display: flex;
+    font-size: 1.2rem;
+    margin: 2rem 1rem 0 1.5rem;
+    gap: 1rem;
+    padding-top:1rem;
+    color: rgb(0, 225, 225);
+}
+.contact .sub h5{
+    color: rgb(0, 225, 225);
+    font-size: 1.5rem;
+    font-family: "Avro",serif;
+}
+.contact .sub p{
+    width: 10rem;
+    color: white;
+    font-size: 1rem;
+    font-family: "Avro",serif;
+    letter-spacing: 1px;
+    margin: 2rem 0rem -1rem -5rem;
+}
+.contact .sub .icon{
+    display: inline-flex;
+    padding-left: 20%;
+    cursor: pointer;
+}
+.contact .sub .icon i:hover{
+    transform: scale(1.2);
+    text-shadow: 0 0 10px rgb(12, 250, 250);
+}
+
+footer {
+    position: absolute;
+    width: 100%;
+    background:black;
+    color:white;
+    padding: 1rem;
+    text-align: center;
+    font-size: 1.5rem;
+}
